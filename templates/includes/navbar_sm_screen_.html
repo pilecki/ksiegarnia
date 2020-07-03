@@ -1,0 +1,86 @@
+    <!--Navbar -->
+
+<nav class="navbar-fluid navbar-expand-sm navbar-light bg-light d-block d-sm-none">
+
+    <!--  Shopping cart -->
+
+    <div class="d-inline-block float-right">
+        <div class="d-inline-block">
+                <a class="" href="#">                                            
+                    <i class="fas fa-shopping-cart"></i>                             
+                </a>
+        </div>
+        
+        <div class="d-inline-block vertical-center-mobile">
+            <p class="my-0">
+                {% if grand_total %}
+                {{ grand_total|floatformat:2 }}
+                {% else %}
+                $0.00
+                {% endif %}
+            </p>           
+        </div>                  
+    </div>         
+    
+    <!-- Collapsible button -->
+
+    <button class="navbar-toggler mb-2 ml-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Brand name -->
+
+    <a class="navbar-brand ml-3" href="{% url 'home' %}">Bookshop</a>    
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav pl-2">
+
+            {% if request.user.is_authenticated  %}
+                {% if request.user.is_superuser %}
+                <li class="nav-item">
+                    <a class="nav-link" href="">Product Management</a>
+                </li>
+                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link" href="">My Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+
+            {% else %}
+
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+            </li>
+            {% endif %}
+            
+        </ul>
+
+    </div>       
+            
+        
+    <!-- Searchbar-->
+
+    <div class="row justify-content-center">
+        <div class="col-11 my-auto py-1 py-lg-0">
+            <form method="GET" action="">
+                <div class="input-group w-100">
+                    <input class="form-control" type="text" name="searchbar" placeholder="Search our site">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                </div>
+            </form>
+        </div>
+    </div>      
+
+</nav>
