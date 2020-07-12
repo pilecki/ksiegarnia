@@ -1,7 +1,7 @@
 <!--Navbar -->
 
 <div class="container-fluid no-gutters p-0">
-    <nav class="navbar-fluid navbar-expand-sm navbar-light bg-light d-none d-sm-block d-lg-none">
+    <nav class="navbar-fluid navbar-expand-sm navbar-light d-none d-sm-block d-lg-none">
 
         <div class="row no-gutters p-0">            
             
@@ -9,26 +9,26 @@
                 <a class="navbar-brand" href="{% url 'home' %}">Bookshop</a>                        
             </div>
 
-            <div class="col-8 d-flex justify-content-center">
-                <div class="d-inline-block pt-2 padding-main-catalog-1 padding-main-catalog-2 padding-3">
+            <div class="col-8 flexi justify-content-center hidden-main-catalog">
+                <div class="d-inline-block pt-2 padding-main-catalog-1">
                     <a href="#">Videocourses</a>
                 </div>
                                 
-                <div class="d-inline-block pt-2 padding-main-catalog-1 padding-main-catalog-2 padding-3">
+                <div class="d-inline-block pt-2 padding-main-catalog-1">
                     <a href="#">Ebooks</a>
                 </div>
                                 
-                <div class="d-inline-block pt-2 padding-main-catalog-1 padding-main-catalog-2 padding-3">
+                <div class="d-inline-block pt-2 padding-main-catalog-1">
                     <a href="#">Books</a>
                 </div>
                                 
-                <div class="d-inline-block pt-2 padding-main-catalog-1 padding-main-catalog-2 padding-3">
+                <div class="d-inline-block pt-2 padding-main-catalog-1">
                     <a href="#">Audiobooks</a>
                 </div>
                             
             </div>
             
-            <div class="col-2 pr-3 d-flex justify-content-end">
+            <div class="col-2 pr-3 d-flex justify-content-end ml-auto">
                 
                 <li class="list-inline-item dropdown">                        
                     <a class="nav-link display-none-on-min-690" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -81,7 +81,7 @@
             
         <!-- Searchbar-->
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center no-gutters">
             <div class="col-9 my-auto py-1 py-lg-0">
                 <form method="GET" action="">
                     <div class="input-group w-100">

@@ -1,9 +1,9 @@
     <!--  Hamburger  containing list of categories of books-->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row d-lg-flex d-none d-lg-block pt-3">           
             <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled my-0">
-                    <li class="list-inline-item mr-5">
+                    <li class="list-inline-item">
                         <div id="mySidenav" class="sidenav">
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                             <a href="#">Programming</a>
@@ -56,23 +56,23 @@
                     {% if request.user.is_authenticated  %}
                         {% if request.user.is_superuser %}
                         <li class="list-inline-item mx-0">
-                            <a class="nav-links-lg nav-links-md" href="">Product Management</a>
+                            <a class="nav-links-lg nav-links-md nav-links-xlg" href="">Product Management</a>
                         </li>
                         {% endif %}
                         <li class="list-inline-item mx-0">
-                            <a class="nav-links-lg nav-links-md" href="">My Profile</a>
+                            <a class="nav-links-lg nav-links-md nav-links-xlg" href="">My Profile</a>
                         </li>
                         <li class="list-inline-item mx-0">
-                            <a class="nav-links-lg nav-links-md" href="{% url 'account_logout' %}">Logout</a>
+                            <a class="nav-links-lg nav-links-md nav-links-xlg" href="{% url 'account_logout' %}">Logout</a>
                         </li>
 
                     {% else %}
 
                         <li class="list-inline-item mx-0">
-                            <a class="nav-links-lg nav-links-md" href="{% url 'account_signup' %}">Register</a>
+                            <a class="nav-links-lg nav-links-md nav-links-xlg" href="{% url 'account_signup' %}">Register</a>
                         </li>
                         <li class="list-inline-item mx-0">
-                            <a class="nav-links-lg nav-links-md" href="{% url 'account_login' %}">Login</a>
+                            <a class="nav-links-lg nav-links-md nav-links-xlg" href="{% url 'account_login' %}">Login</a>
                         </li>
                     {% endif %}
                     
@@ -102,9 +102,12 @@
         
             </div>
         </div>
-        <div class="row d-lg-flex d-none d-lg-block text-center pt-3">
+
+        <!--  Categories of books-->
+
+        <div class="row d-lg-flex d-none d-lg-block text-center py-3">
             <div class="col">
-                <a href="#">Books</a>
+                <a href="">Books</a>
             </div>
             <div class="col">
                 <a href="#">Ebooks</a>

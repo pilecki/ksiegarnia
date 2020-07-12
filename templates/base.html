@@ -17,20 +17,24 @@
   </head>
   <body>
 
-    <header class="container-fluid no-gutters p-0">
+    <header class="container-fluid no-gutters p-0 orange">
         
-
             {% include 'includes/navbar_lg_screen.html' %}
             {% include 'includes/navbar_md_screen.html' %}
             {% include 'includes/navbar_sm_screen_.html' %}
-
-
         
     </header>
 
+    <div class="container">
+    {% block category %}
 
+    {% endblock %}
+    
+    </div>
 
+    
 
+    
     {% block content %}
 
     {% endblock %}

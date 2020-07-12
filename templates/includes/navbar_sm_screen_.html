@@ -1,6 +1,6 @@
     <!--Navbar -->
-
-<nav class="navbar-fluid navbar-expand-sm navbar-light bg-light d-block d-sm-none">
+<div class="container-fluid no-gutters">
+<nav class="navbar navbar-light orange d-block d-sm-none px-0">
 
     <!--  Shopping cart -->
 
@@ -24,13 +24,13 @@
     
     <!-- Collapsible button -->
 
-    <button class="navbar-toggler mb-2 ml-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler mb-2 ml-2 p-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     
     <!-- Brand name -->
 
-    <a class="navbar-brand ml-3" href="{% url 'home' %}">Bookshop</a>    
+    <a class="navbar-brand ml-2 navbar-small" href="{% url 'home' %}">Bookshop</a>    
 
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -84,3 +84,4 @@
     </div>      
 
 </nav>
+</div>
