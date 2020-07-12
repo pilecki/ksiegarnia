@@ -138,8 +138,19 @@ a:hover {
 }
 }
 
+/* Styled all categories button on small devices */
+
+.all-categories {
+    width: 100%;
+    background-color: orange;
+    font-size: 1rem;
+    color: pink;
+}
 
 
+tr > td {
+    width: 50%;
+}
 
 /* Styling hamburger   */
 
