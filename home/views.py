@@ -9,12 +9,14 @@ def index(request):
 
     products = Product.objects.filter(genre='1')[:3]
     newest_products = Product.objects.order_by('-pub_date')[:4]
+    best_rated = Product.objects.order_by('-rating')[:4]
 
 
 
     context = {
         'products': products,
         'newest_products': newest_products,
+        'best_rated' : best_rated,
 
     }
 
@@ -25,9 +27,11 @@ def newest(request):
     """ A page  showing the last 12 books added"""
 
     newest_products = Product.objects.order_by('-pub_date')[:11]
+    best_rated = Product.objects.order_by('-rating')[:11]
     context = {
 
         'newest_products': newest_products,
+        'best_rated' : best_rated,
 
     }
 
