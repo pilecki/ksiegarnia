@@ -2,7 +2,7 @@
 {% load static %}
 
 
-{% block category %}
+{% block newest %}
 <hr>
 <div class="container">
     <div class="row pt-1 pb-4 position-relative justify-content-center">        
@@ -20,7 +20,7 @@
     <div class="row">      
 
         {% for product in newest_products %}
-            <div class="d-none d-lg-block col-lg-3">
+            <div class="d-none d-lg-block col-lg-3 pb-2">
                                 <div class="card h-100">
                                     {% if product.image %}
                                     <a href="{% url 'product_detail' product.id %}">
@@ -53,9 +53,9 @@
     <div class="row d-none d-sm-block d-md-block d-lg-none d-sm-flex d-md-flex justify-content-center">
         
         {% for product in newest_products %}                           
-
+        <div class=>
             <div class="card py-1" style="width: 500px;">
-                <div class="row no-gutters">
+                <div class="row no-gutters pb-1">
                     {% if product.image %}
                     <div class="col-sm-3">
                         <a href="{% url 'product_detail' product.id %}">
@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </div>
-    
+        </div>
         {% endfor %}
         
     </div>
@@ -121,6 +121,12 @@
 </div>
     
 {% endblock %}
+
+
+ 
+
+
+
 
 
  

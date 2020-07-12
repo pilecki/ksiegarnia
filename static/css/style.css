@@ -117,6 +117,28 @@ a:hover {
 }
 
 
+@media only screen and (min-width: 768px) {
+    .right-md-element {
+    
+    
+    position: absolute;
+    right: 0;
+    font-size: 0.7rem;
+    padding-top: 0.3rem;
+}
+}
+
+@media only screen and (max-width: 767px) {
+    .right-sm-element {
+    margin-bottom: 5px;
+    position: absolute;
+    top: 35px;
+    font-size: 0.7rem;
+    padding-top: 0.3rem;
+}
+}
+
+
 
 
 /* Styling hamburger   */
