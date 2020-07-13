@@ -6,16 +6,16 @@
                     <li class="list-inline-item">
                         <div id="mySidenav" class="sidenav">
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                            <a href="#">Programming</a>
-                            <a href="#">Hardware</a>
-                            <a href="#">Network</a>
-                            <a href="#">Web applications</a>
-                            <a href="#">Hacking</a>
-                            <a href="#">Electronics</a>
-                            <a href="#">Bussines</a>
-                            <a href="#">Graphics</a>
-                            <a href="#">Games</a>
-                            <a href="#">Databases</a>
+                            <a href="{% url 'products' %}?genre=programming">Programming</a>
+                            <a href="{% url 'products' %}?genre=hardware">Hardware</a>
+                            <a href="{% url 'products' %}?genre=network">Network</a>
+                            <a href="{% url 'products' %}?genre=web_application">Web applications</a>
+                            <a href="{% url 'products' %}?genre=hacking">Hacking</a>
+                            <a href="{% url 'products' %}?genre=electronics">Electronics</a>
+                            <a href="{% url 'products' %}?genre=business">Bussines</a>
+                            <a href="{% url 'products' %}?genre=graphics">Graphics</a>
+                            <a href="{% url 'products' %}?genre=games">Games</a>
+                            <a href="{% url 'products' %}?genre=databases">Databases</a>
                         </div>                  
             
                         <i class="fas fa-bars hamburger d-none d-lg-block mr-3" onclick="openNav()"></i>
@@ -33,9 +33,9 @@
             <!-- Searchbar-->
 
             <div class="col-12 col-lg-6 my-auto py-1 py-lg-0">
-                    <form method="GET" action="">
+                    <form method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100">
-                            <input class="form-control" type="text" name="searchbar" placeholder="Search our site">
+                            <input class="form-control" type="text" name="q" placeholder="Search our site">
                             <div class="input-group-append">
                                 <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                                     <span class="icon">
@@ -107,19 +107,19 @@
 
         <div class="row d-lg-flex d-none d-lg-block text-center py-3">
             <div class="col">
-                <a href="">Books</a>
+                <a href="{% url 'products' %}?category=books">Books</a>
             </div>
             <div class="col">
-                <a href="#">Ebooks</a>
+                <a href="{% url 'products' %}?category=ebooks">Ebooks</a>
             </div>
             <div class="col">
-                <a href="#">Videocourses</a>
+                <a href="{% url 'products' %}?category=videocourses">Videocourses</a>
             </div>
             <div class="col">
-                <a href="#">Audiobooks</a>
+                <a href="{% url 'products' %}?category=audiobooks">Audiobooks</a>
             </div>
             <div class="col">
-                <a href="#">Promotions</a>
+                <a href="{% url 'products' %}?category=books">Promotions</a>
             </div>
         </div>
 

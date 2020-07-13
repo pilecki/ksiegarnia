@@ -5,7 +5,7 @@
 
 <!--  All categories button under the navbar on small devices-->
 
-<div class="d-sm-none d-md-block">
+<div class="d-lg-none">
     <div class="text-center">
         <a class="p-0 all-categories" type="button" data-toggle="collapse" data-target="#all-categories" aria-controls="all-categories" aria-expanded="false" aria-label="Toggle navigation">
             <span class="">All categories</span>
@@ -17,42 +17,42 @@
             <tbody>
                 <tr>                
                     <td>
-                        <a href="">Programming</a>
+                        <a href="{% url 'products' %}?genre=programming">Programming</a>
                     </td>
                     <td>
-                        <a href="">Business</a>
-                    </td>
-                </tr>
-                 <tr>                
-                    <td>
-                        <a href="">Hardware</a>
-                    </td>
-                    <td>
-                        <a href="">Network</a>
+                        <a href="{% url 'products' %}?genre=business">Business</a>
                     </td>
                 </tr>
                  <tr>                
                     <td>
-                        <a href="">Hacking</a>
+                        <a href="{% url 'products' %}?genre=hardware">Hardware</a>
                     </td>
                     <td>
-                        <a href="">Web application</a>
-                    </td>
-                </tr>
-                 <tr>                
-                    <td>
-                        <a href="">Electronics</a>
-                    </td>
-                    <td>
-                        <a href="">Graphics</a>
+                        <a href="{% url 'products' %}?genre=network">Network</a>
                     </td>
                 </tr>
                  <tr>                
                     <td>
-                        <a href="">Games</a>
+                        <a href="{% url 'products' %}?genre=hacking">Hacking</a>
                     </td>
                     <td>
-                        <a href="">Databases</a>
+                        <a href="{% url 'products' %}?genre=web_application">Web application</a>
+                    </td>
+                </tr>
+                 <tr>                
+                    <td>
+                        <a href="{% url 'products' %}?genre=electronics">Electronics</a>
+                    </td>
+                    <td>
+                        <a href="{% url 'products' %}?genre=graphics">Graphics</a>
+                    </td>
+                </tr>
+                 <tr>                
+                    <td>
+                        <a href="{% url 'products' %}?genre=games">Games</a>
+                    </td>
+                    <td>
+                        <a href="{% url 'products' %}?genre=databases">Databases</a>
                     </td>
                 </tr>                
             </tbody>

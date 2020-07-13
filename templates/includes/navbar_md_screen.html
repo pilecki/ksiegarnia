@@ -11,19 +11,19 @@
 
             <div class="col-8 flexi justify-content-center hidden-main-catalog">
                 <div class="d-inline-block pt-2 padding-main-catalog-1">
-                    <a href="#">Videocourses</a>
+                    <a href="{% url 'products' %}?category=videocourses">Videocourses</a>
                 </div>
                                 
                 <div class="d-inline-block pt-2 padding-main-catalog-1">
-                    <a href="#">Ebooks</a>
+                    <a href="{% url 'products' %}?category=ebooks">Ebooks</a>
                 </div>
                                 
                 <div class="d-inline-block pt-2 padding-main-catalog-1">
-                    <a href="#">Books</a>
+                    <a href="{% url 'products' %}?category=books">Books</a>
                 </div>
                                 
                 <div class="d-inline-block pt-2 padding-main-catalog-1">
-                    <a href="#">Audiobooks</a>
+                    <a href="{% url 'products' %}?category=audiobooks">Audiobooks</a>
                 </div>
                             
             </div>
@@ -83,9 +83,9 @@
 
         <div class="row justify-content-center no-gutters">
             <div class="col-9 my-auto py-1 py-lg-0">
-                <form method="GET" action="">
+                <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
-                        <input class="form-control" type="text" name="searchbar" placeholder="Search our site">
+                        <input class="form-control" type="text" name="q" placeholder="Search our site">
                         <div class="input-group-append">
                             <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                                 <span class="icon">

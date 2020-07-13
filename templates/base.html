@@ -24,31 +24,26 @@
             {% include 'includes/navbar_sm_screen_.html' %}
         
     </header>
-    {% block con %}
     
-    {% endblock %}
 
     {% block all_categories %}
     {% endblock %}
 
-    
+    {% if messages %}
+    {% endif %}
+
     {% block category %}
 
     {% endblock %}
     
     
-
     <div class="container">
     {% block newest %}
 
 
     {% endblock %}
     
-    </div>
-
-    
-
-    
+    </div>   
     {% block content %}
 
     {% endblock %}
