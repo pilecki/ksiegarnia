@@ -25,6 +25,7 @@ a:hover {
 }
 
 
+
 /*   Navbar   */
 
 .flexi {
@@ -95,6 +96,15 @@ a:hover {
     display: none;
 }
 }
+@media only screen and (max-width: 767px) {
+    .width-50 {
+    
+    width: 50%;
+    padding-top: 1.5rem;
+    }
+}
+
+
 
 
 /* Cards */
@@ -212,3 +222,11 @@ tr > td {
     font-size: 18px;
      }
 }
+
+
+/* Font styles  */
+
+.font-h {
+    line-height: 1.7rem;
+}
+
