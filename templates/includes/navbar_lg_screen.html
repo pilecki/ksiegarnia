@@ -52,7 +52,6 @@
 
             <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-lg-right my-0">
-
                     {% if request.user.is_authenticated  %}
                         {% if request.user.is_superuser %}
                         <li class="list-inline-item mx-0">
@@ -65,9 +64,7 @@
                         <li class="list-inline-item mx-0">
                             <a class="nav-links-lg nav-links-md nav-links-xlg" href="{% url 'account_logout' %}">Logout</a>
                         </li>
-
                     {% else %}
-
                         <li class="list-inline-item mx-0">
                             <a class="nav-links-lg nav-links-md nav-links-xlg" href="{% url 'account_signup' %}">Register</a>
                         </li>
@@ -75,31 +72,24 @@
                             <a class="nav-links-lg nav-links-md nav-links-xlg" href="{% url 'account_login' %}">Login</a>
                         </li>
                     {% endif %}
-                    
+
+                    <!--  Shopping bag-->
+
                     <li class="list-inline-item mx-0">
-                        <a class="nav-links-lg nav-links-md" href="#">                        
+                        <a class="nav-links-lg nav-links-md" href="{% url 'view_bag' %}">                        
                             <i class="fas fa-shopping-cart"></i>                             
                         </a>                   
-                    </li>
-                    
-                    <li class="list-inline-item mx-0">                            
-                                
-                            
+                    </li>                    
+                    <li class="list-inline-item mx-0">                                                              
                         <p class="my-0 nav-links-lg nav-links-md">
                             {% if grand_total %}
                             {{ grand_total|floatformat:2 }}
                             {% else %}
                             $0.00
                             {% endif %}
-                        </p>
-                                
-                    
-                    
+                        </p>                                       
                     </li>
-        
-                </ul>
-
-        
+                </ul>        
             </div>
         </div>
 
@@ -122,7 +112,6 @@
                 <a href="{% url 'products' %}?category=books">Promotions</a>
             </div>
         </div>
-
     </div>
     
 

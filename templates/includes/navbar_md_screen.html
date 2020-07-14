@@ -2,13 +2,10 @@
 
 <div class="container-fluid no-gutters p-0">
     <nav class="navbar-fluid navbar-expand-sm navbar-light d-none d-sm-block d-lg-none">
-
         <div class="row no-gutters p-0">            
-            
             <div class="col-2 pl-2">                        
                 <a class="navbar-brand" href="{% url 'home' %}">Bookshop</a>                        
             </div>
-
             <div class="col-8 flexi justify-content-center hidden-main-catalog">
                 <div class="d-inline-block pt-2 padding-main-catalog-1">
                     <a href="{% url 'products' %}?category=videocourses">Videocourses</a>
@@ -24,21 +21,16 @@
                                 
                 <div class="d-inline-block pt-2 padding-main-catalog-1">
                     <a href="{% url 'products' %}?category=audiobooks">Audiobooks</a>
-                </div>
-                            
-            </div>
-            
-            <div class="col-2 pr-3 d-flex justify-content-end ml-auto">
-                
+                </div>                            
+            </div>            
+            <div class="col-2 pr-3 d-flex justify-content-end ml-auto">                
                 <li class="list-inline-item dropdown">                        
                     <a class="nav-link display-none-on-min-690" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Accounts
-
                     </a>
                     <a class="nav-link display-on-max-689" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-user-circle " ></i>                                
-                    </a>
-                                
+                    </a>                                
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
@@ -50,29 +42,26 @@
                             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                             <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                         {% endif %}
+                    </div>                                
+                </li>
+                <li class="list-inline-item pt-2">
+                    <div>
+                        <div class="d-inline-block">
+                            <a class="" href="{% url 'view_bag' %}">                                                                    
+                                <i class="fas fa-shopping-cart"></i>                             
+                            </a>
+                        </div>                                        
+                        <div class="d-inline-block">
+                            <p class="my-0">
+                                {% if grand_total %}
+                                {{ grand_total|floatformat:2 }}
+                                {% else %}
+                                $0.00
+                                {% endif %}
+                            </p>           
+                        </div>                  
                     </div>
-                                
-                    </li>
-                    <li class="list-inline-item pt-2">
-                        <div>
-                            <div class="d-inline-block">
-                                <a class="" href="#">                                                                    
-                                    <i class="fas fa-shopping-cart"></i>                             
-                                </a>
-                            </div>
-                                        
-                            <div class="d-inline-block">
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                    {{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                    $0.00
-                                    {% endif %}
-                                </p>           
-                            </div>                  
-                        </div>
-                    </li>            
-                               
+                </li>                               
             </div>
             
         </div>       
@@ -96,7 +85,6 @@
                     </div>
                 </form>
             </div>
-        </div>       
-    
+        </div>    
     </nav>
 </div>
