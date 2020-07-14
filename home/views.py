@@ -11,12 +11,10 @@ def index(request):
     newest_products = Product.objects.order_by('-pub_date')[:4]
     best_rated = Product.objects.order_by('-rating')[:4]
 
-
-
     context = {
         'products': products,
         'newest_products': newest_products,
-        'best_rated' : best_rated,
+        'best_rated': best_rated,
 
     }
 
@@ -31,9 +29,8 @@ def newest(request):
     context = {
 
         'newest_products': newest_products,
-        'best_rated' : best_rated,
+        'best_rated': best_rated,
 
     }
-
 
     return render(request, 'home/newest.html', context)
