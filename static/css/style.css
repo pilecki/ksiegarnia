@@ -241,20 +241,23 @@ tr > td {
     display: none !important;
 }
 }
-@media only screen and (min-width: 578px) {
-    .show-element1 {
-    display: none !important;
-}
-}
-@media only screen and (max-width: 578px) {
-    .show-element {
-    display: table-row !important;
-}
-}
+
 
 @media only screen and (max-width: 767px) {
     .font-table-small {
     font-size: .8rem;
     font-weight: 600;
+}
+}
+
+a:hover{
+    cursor: pointer;
+}
+@media only screen and (max-width: 578px) {
+    .move-element {
+    position: absolute;
+    bottom : 85px;
+    left: 5px;
+    width:35%;
 }
 }

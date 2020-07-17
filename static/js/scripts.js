@@ -10,6 +10,7 @@ function closeNav() {
   document.body.style.backgroundColor = "white";
 }
 
+
 // Variables for up and down quantity buttons and input field 
 
 let countDownBtn = document.querySelector('.decrement-qty');
@@ -17,6 +18,7 @@ let input = document.querySelector('.qty_input');
 let countUpBtn = document.querySelector('.increment-qty');
 
 // Function to check input value
+
 
 const checkInputValue = function (){
 
@@ -33,15 +35,14 @@ const checkInputValue = function (){
     if (num3 < 99 ) {
        countUpBtn.removeAttribute('disabled', ''); 
     }
-} 
 
-
+    }
 // Incerement quantity
    
 countUpBtn.addEventListener('click', (event) => {
-event.preventDefault()
-input.value = parseInt(input.value) +1
-checkInputValue();
+    event.preventDefault()
+    input.value = parseInt(input.value) +1
+    checkInputValue();
 });
 
 // Decrement quantity
@@ -49,5 +50,32 @@ checkInputValue();
 countDownBtn.addEventListener('click', (event) => {
     event.preventDefault()
     input.value = parseInt(input.value) - 1
-  checkInputValue();
+    checkInputValue();
 }); 
+
+var allQtyInputs = $('.qty_input');
+    for(var i = 0; i < allQtyInputs.length; i++){
+        var itemId = $(allQtyInputs[i]).data('item_id');
+        checkInputValue();
+    }
+
+ // Update quantity on click
+
+    $('.update-link').click(function() {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    });
+
+
+// Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = '{{ csrf_token }}';
+        var itemId = $(this).attr('id').split('remove_')[1];   
+        var url = `/bag/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })   
+
