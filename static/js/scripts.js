@@ -78,4 +78,3 @@ var allQtyInputs = $('.qty_input');
              location.reload();
          });
     })   
-
