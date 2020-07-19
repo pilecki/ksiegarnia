@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block all_categories %}
+
+<!--  All categories button under the navbar on small devices-->
+
+<div class="d-lg-none">
+    <div class="text-center">
+        <a class="p-0 all-categories" type="button" data-toggle="collapse" data-target="#all-categories" aria-controls="all-categories" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="">All categories</span>
+        </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="all-categories">
+        <table class="table table-bordered text-center">            
+            <tbody>
+                <tr>                
+                    <td>
+                        <a href="{% url 'products' %}?genre=programming">Programming</a>
+                    </td>
+                    <td>
+                        <a href="{% url 'products' %}?genre=business">Business</a>
+                    </td>
+                </tr>
+                 <tr>                
+                    <td>
+                        <a href="{% url 'products' %}?genre=hardware">Hardware</a>
+                    </td>
+                    <td>
+                        <a href="{% url 'products' %}?genre=network">Network</a>
+                    </td>
+                </tr>
+                 <tr>                
+                    <td>
+                        <a href="{% url 'products' %}?genre=hacking">Hacking</a>
+                    </td>
+                    <td>
+                        <a href="{% url 'products' %}?genre=web_application">Web application</a>
+                    </td>
+                </tr>
+                 <tr>                
+                    <td>
+                        <a href="{% url 'products' %}?genre=electronics">Electronics</a>
+                    </td>
+                    <td>
+                        <a href="{% url 'products' %}?genre=graphics">Graphics</a>
+                    </td>
+                </tr>
+                 <tr>                
+                    <td>
+                        <a href="{% url 'products' %}?genre=games">Games</a>
+                    </td>
+                    <td>
+                        <a href="{% url 'products' %}?genre=databases">Databases</a>
+                    </td>
+                </tr>                
+            </tbody>
+        </table> 
+    </div>
+</div>
+
+{% endblock %}
+
+{% block profile %}
+ <div class="container mb-2">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h4 class="">My profile</h4>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+           <div class="col"></div>
+        </div>
+ </div> 
+  
+{% endblock %}
