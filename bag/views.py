@@ -1,6 +1,6 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
-
+from products.models import Product
 # Create your views here.
 
 
