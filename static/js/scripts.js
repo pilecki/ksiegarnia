@@ -13,50 +13,63 @@ function closeNav() {
 
 // Variables for up and down quantity buttons and input field 
 
-let countDownBtn = document.querySelector('.decrement-qty');
-let input = document.querySelector('.qty_input');
-let countUpBtn = document.querySelector('.increment-qty');
+let downBtn = document.querySelectorAll('.decrement-qty');
+downBtn = [...downBtn]
+let upBtn = document.querySelectorAll('.increment-qty');
+upBtn = [...upBtn]
+let allInput = document.querySelectorAll('.qty_input')
+allInput = [...allInput]
 
-// Function to check input value
 
+// Increment value
 
-const checkInputValue = function (){
+for (let i = 0; i <  upBtn.length; i++){
+    upBtn[i].addEventListener('click', (event) => {
+        
+        //Switch off default action of the button
 
-    let num3 = (input.value = parseInt(input.value))
+        event.preventDefault()
+        //Read the value of the input field and increment 
+
+        allInput[i].value = parseInt(allInput[i].value) +1 ;         
+        
+        //Disable and enable buttons
+
+        if ( allInput[i].value == 99 ){
+            
+           upBtn[i].setAttribute('disabled', '');
+        }
+        if ( allInput[i].value > 0 ){
+            
+           downBtn[i].removeAttribute('disabled', '');
+        }             
+        })
+    }
+
+// Decrement value
+
+for (let i = 0; i <  downBtn.length; i++){
+    downBtn[i].addEventListener('click', (event) => {
+
+        //Switch off default action of the button
+        
+        event.preventDefault()   
+        
+        //Read the value of the input field and increment
     
-    countDownBtn.setAttribute('disabled', '');
-
-    if (num3 > 1 ) {
-       countDownBtn.removeAttribute('disabled', ''); 
-    }
-    if ( num3 >= 98 ){
-        countUpBtn.setAttribute('disabled', '');
-    }
-    if (num3 < 99 ) {
-       countUpBtn.removeAttribute('disabled', ''); 
-    }
-
-    }
-// Incerement quantity
-   
-countUpBtn.addEventListener('click', (event) => {
-    event.preventDefault()
-    input.value = parseInt(input.value) +1
-    checkInputValue();
-});
-
-// Decrement quantity
-
-countDownBtn.addEventListener('click', (event) => {
-    event.preventDefault()
-    input.value = parseInt(input.value) - 1
-    checkInputValue();
-}); 
-
-var allQtyInputs = $('.qty_input');
-    for(var i = 0; i < allQtyInputs.length; i++){
-        var itemId = $(allQtyInputs[i]).data('item_id');
-        checkInputValue();
+        allInput[i].value = parseInt(allInput[i].value) -1 ;         
+        
+        //Disable and enable buttons
+        
+        if ( allInput[i].value == 0 ){ 
+            
+           downBtn[i].setAttribute('disabled', '');
+        }
+        if ( allInput[i].value < 99 ){
+            
+           upBtn[i].removeAttribute('disabled', '');
+        }                   
+        }) 
     }
 
  // Update quantity on click
@@ -67,7 +80,7 @@ var allQtyInputs = $('.qty_input');
     });
 
 
-// Remove item and reload on click
+    // Remove item and reload on click
     $('.remove-item').click(function(e) {
         var csrfToken = '{{ csrf_token }}';
         var itemId = $(this).attr('id').split('remove_')[1];   
@@ -77,4 +90,5 @@ var allQtyInputs = $('.qty_input');
          .done(function() {
              location.reload();
          });
-    })   
+    });
+
