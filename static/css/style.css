@@ -162,6 +162,16 @@ tr > td {
     width: 50%;
 }
 
+/* Allauth */
+
+.width-fit-content {
+    width: fit-content;
+}
+
+
+
+
+
 /* Styling hamburger   */
 
 .hamburger{
