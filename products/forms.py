@@ -1,5 +1,5 @@
 from django import forms
-from .models import Product, Category, Genre
+from .models import Product, Category, Genre, ComingSoon
 
 
 class ProductForm(forms.ModelForm):
@@ -18,3 +18,10 @@ class ProductForm(forms.ModelForm):
 
         self.fields['category'].choices = category_friendly_names
         self.fields['genre'].choices = genre_friendly_names
+
+
+class ComingSoonForm(forms.ModelForm):
+
+    class Meta:
+        model = ComingSoon
+        fields = '__all__'

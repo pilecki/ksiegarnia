@@ -54,8 +54,16 @@
                 <ul class="list-inline list-unstyled text-lg-right my-0">
                     {% if request.user.is_authenticated  %}
                         {% if request.user.is_superuser %}
-                        <li class="list-inline-item mx-0">
-                            <a class="nav-links-lg nav-links-md nav-links-xlg" href="{% url 'add_product' %}">Product Management</a>
+                        <li class="list-inline-item mx-0">                       
+                            <div class="dropdown">
+                                <p class="nav-links-lg nav-links-md nav-links-xlg dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" 
+                                aria-haspopup="true" aria-expanded="false" >Product Management
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                        <a class="dropdown-item" href="{% url 'add_product' %}">Add product</a>
+                                        <a class="dropdown-item" href="{% url 'add_coming_soon' %}">Add new release</a>                                    
+                                    </div>
+                                </p>
+                            </div>
                         </li>
                         {% endif %}
                         <li class="list-inline-item mx-0">
@@ -109,7 +117,7 @@
                 <a href="{% url 'products' %}?category=audiobooks">Audiobooks</a>
             </div>
             <div class="col">
-                <a href="{% url 'products' %}?category=books">Promotions</a>
+                <a href="{% url 'coming' %}">Coming soon...</a>
             </div>
         </div>
     </div>

@@ -11,7 +11,8 @@
       "genre": 1,      
       "rating": 4.6,
       "image_url": "https://www.amazon.co.uk/photos/share/MnKgTuDWFLOOteOXKqH3Lp16iFOzHowozn8BoQJm11Q",
-      "image": "1.jpg"      
+      "image": "1.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -26,7 +27,8 @@
       "genre": 10,
       "rating": 4.6,
       "image_url": "https://www.amazon.co.uk/photos/share/nopGKzbanPGvOlXObbWB5LREFViTc7WKRzUNlidJtOw",
-      "image": "2.jpg"
+      "image": "2.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -41,7 +43,8 @@
       "genre": 2,
       "rating": 4.7,
       "image_url": "https://www.amazon.co.uk/photos/share/N75RGg5ikZTXrwLqodFusqCGdZ9HZYakNr8eV92CGUi",
-      "image": "3.jpg"
+      "image": "3.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -56,7 +59,8 @@
       "genre": 3,
       "rating": 3,
       "image_url": "https://www.amazon.co.uk/photos/share/CNRkIP2oEvmbrm1jlf1oYmBH6xDzV23alOufIxflGUq",
-      "image": "4.jpg"
+      "image": "4.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -71,7 +75,8 @@
       "genre": 4,
       "rating": 5,
       "image_url": "https://www.amazon.co.uk/photos/share/QfRRsBltSOwXJGX73GmX10Kp15mFcLZWdAX2iETj2db",
-      "image": "5.jpg"
+      "image": "5.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -86,7 +91,8 @@
       "genre": 5,
       "rating": 4.7,
       "image_url": "https://www.amazon.co.uk/photos/share/bwvEHqOVtE1bT2vvk1lTeiTg005F0n8OaYnpjObGkNX",
-      "image": "6.jpg"
+      "image": "6.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -101,8 +107,9 @@
       "genre": 6,
       "rating": 4.4,
       "image_url": "https://www.amazon.co.uk/photos/share/U6lp6HhagYsBzm3WaxiacVnECVSKNvfMv7B8gT8lZSo",
-      "image": "7.jpg"
-    }
+      "image": "7.jpg",
+      "pub_date": "2020-04-14"
+  }
   },
   {
     "pk": 8,
@@ -116,7 +123,8 @@
       "genre": 7,
       "rating": 4.5,
       "image_url": "https://www.amazon.co.uk/photos/share/gFI4nKX0fXa909z7nCx38eVaXqap2U5pOP0Uc6CXGNn",
-      "image": "8.jpg"
+      "image": "8.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -131,7 +139,8 @@
       "genre": 8,
       "rating": 4.7,
       "image_url": "https://www.amazon.co.uk/photos/share/amzGWb5cuEwBzkEWZsB3kMU18TxbYWvAshK8ubZpLxM",
-      "image": "9.jpg"
+      "image": "9.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -146,7 +155,8 @@
       "genre": 9,
       "rating": 4.4,
       "image_url": "https://www.amazon.co.uk/photos/share/dn3ZbD4C9fCAGJmBeNveUaEyaZcvqLLEiHVg2KFvsIg",
-      "image": "10.jpg"
+      "image": "10.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -161,7 +171,8 @@
       "genre": 1,      
       "rating": 4.6,
       "image_url": "https://www.amazon.co.uk/photos/share/MnKgTuDWFLOOteOXKqH3Lp16iFOzHowozn8BoQJm11Q",
-      "image": "1.jpg"
+      "image": "1.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -176,7 +187,8 @@
       "genre": 10,
       "rating": 4.6,
       "image_url": "https://www.amazon.co.uk/photos/share/nopGKzbanPGvOlXObbWB5LREFViTc7WKRzUNlidJtOw",
-      "image": "2.jpg"
+      "image": "2.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -191,7 +203,8 @@
       "genre": 2,
       "rating": 4.7,
       "image_url": "https://www.amazon.co.uk/photos/share/N75RGg5ikZTXrwLqodFusqCGdZ9HZYakNr8eV92CGUi",
-      "image": "3.jpg"
+      "image": "3.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -206,7 +219,8 @@
       "genre": 3,
       "rating": 3,
       "image_url": "https://www.amazon.co.uk/photos/share/CNRkIP2oEvmbrm1jlf1oYmBH6xDzV23alOufIxflGUq",
-      "image": "4.jpg"
+      "image": "4.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -221,7 +235,8 @@
       "genre": 4,
       "rating": 5,
       "image_url": "https://www.amazon.co.uk/photos/share/QfRRsBltSOwXJGX73GmX10Kp15mFcLZWdAX2iETj2db",
-      "image": "5.jpg"
+      "image": "5.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -236,7 +251,8 @@
       "genre": 5,
       "rating": 4.7,
       "image_url": "https://www.amazon.co.uk/photos/share/bwvEHqOVtE1bT2vvk1lTeiTg005F0n8OaYnpjObGkNX",
-      "image": "6.jpg"
+      "image": "6.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -251,7 +267,8 @@
       "genre": 6,
       "rating": 4.4,
       "image_url": "https://www.amazon.co.uk/photos/share/U6lp6HhagYsBzm3WaxiacVnECVSKNvfMv7B8gT8lZSo",
-      "image": "7.jpg"
+      "image": "7.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -266,7 +283,8 @@
       "genre": 7,
       "rating": 4.5,
       "image_url": "https://www.amazon.co.uk/photos/share/gFI4nKX0fXa909z7nCx38eVaXqap2U5pOP0Uc6CXGNn",
-      "image": "8.jpg"
+      "image": "8.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -281,7 +299,8 @@
       "genre": 8,
       "rating": 4.7,
       "image_url": "https://www.amazon.co.uk/photos/share/amzGWb5cuEwBzkEWZsB3kMU18TxbYWvAshK8ubZpLxM",
-      "image": "9.jpg"
+      "image": "9.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -296,7 +315,8 @@
       "genre": 9,
       "rating": 4.4,
       "image_url": "https://www.amazon.co.uk/photos/share/dn3ZbD4C9fCAGJmBeNveUaEyaZcvqLLEiHVg2KFvsIg",
-      "image": "10.jpg"
+      "image": "10.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -311,7 +331,8 @@
       "genre": 1,      
       "rating": 4.6,
       "image_url": "https://www.amazon.co.uk/photos/share/MnKgTuDWFLOOteOXKqH3Lp16iFOzHowozn8BoQJm11Q",
-      "image": "1.jpg"
+      "image": "1.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -326,7 +347,8 @@
       "genre": 10,
       "rating": 4.6,
       "image_url": "https://www.amazon.co.uk/photos/share/nopGKzbanPGvOlXObbWB5LREFViTc7WKRzUNlidJtOw",
-      "image": "2.jpg"
+      "image": "2.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -341,7 +363,8 @@
       "genre": 2,
       "rating": 4.7,
       "image_url": "https://www.amazon.co.uk/photos/share/N75RGg5ikZTXrwLqodFusqCGdZ9HZYakNr8eV92CGUi",
-      "image": "3.jpg"
+      "image": "3.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -356,7 +379,8 @@
       "genre": 3,
       "rating": 3,
       "image_url": "https://www.amazon.co.uk/photos/share/CNRkIP2oEvmbrm1jlf1oYmBH6xDzV23alOufIxflGUq",
-      "image": "4.jpg"
+      "image": "4.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -371,7 +395,8 @@
       "genre": 4,
       "rating": 5,
       "image_url": "https://www.amazon.co.uk/photos/share/QfRRsBltSOwXJGX73GmX10Kp15mFcLZWdAX2iETj2db",
-      "image": "5.jpg"
+      "image": "5.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -386,7 +411,8 @@
       "genre": 5,
       "rating": 4.7,
       "image_url": "https://www.amazon.co.uk/photos/share/bwvEHqOVtE1bT2vvk1lTeiTg005F0n8OaYnpjObGkNX",
-      "image": "6.jpg"
+      "image": "6.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -401,7 +427,8 @@
       "genre": 6,
       "rating": 4.4,
       "image_url": "https://www.amazon.co.uk/photos/share/U6lp6HhagYsBzm3WaxiacVnECVSKNvfMv7B8gT8lZSo",
-      "image": "7.jpg"
+      "image": "7.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -416,7 +443,8 @@
       "genre": 7,
       "rating": 4.5,
       "image_url": "https://www.amazon.co.uk/photos/share/gFI4nKX0fXa909z7nCx38eVaXqap2U5pOP0Uc6CXGNn",
-      "image": "8.jpg"
+      "image": "8.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -431,7 +459,8 @@
       "genre": 8,
       "rating": 4.7,
       "image_url": "https://www.amazon.co.uk/photos/share/amzGWb5cuEwBzkEWZsB3kMU18TxbYWvAshK8ubZpLxM",
-      "image": "9.jpg"
+      "image": "9.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -446,7 +475,8 @@
       "genre": 9,
       "rating": 4.4,
       "image_url": "https://www.amazon.co.uk/photos/share/dn3ZbD4C9fCAGJmBeNveUaEyaZcvqLLEiHVg2KFvsIg",
-      "image": "10.jpg"
+      "image": "10.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -461,7 +491,8 @@
       "genre": 1,      
       "rating": 4.6,
       "image_url": "https://www.amazon.co.uk/photos/share/MnKgTuDWFLOOteOXKqH3Lp16iFOzHowozn8BoQJm11Q",
-      "image": "1.jpg"
+      "image": "1.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -476,7 +507,8 @@
       "genre": 10,
       "rating": 4.6,
       "image_url": "https://www.amazon.co.uk/photos/share/nopGKzbanPGvOlXObbWB5LREFViTc7WKRzUNlidJtOw",
-      "image": "2.jpg"
+      "image": "2.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -491,7 +523,8 @@
       "genre": 2,
       "rating": 4.7,
       "image_url": "https://www.amazon.co.uk/photos/share/N75RGg5ikZTXrwLqodFusqCGdZ9HZYakNr8eV92CGUi",
-      "image": "3.jpg"
+      "image": "3.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -506,7 +539,8 @@
       "genre": 3,
       "rating": 3,
       "image_url": "https://www.amazon.co.uk/photos/share/CNRkIP2oEvmbrm1jlf1oYmBH6xDzV23alOufIxflGUq",
-      "image": "4.jpg"
+      "image": "4.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -521,7 +555,8 @@
       "genre": 4,
       "rating": 5,
       "image_url": "https://www.amazon.co.uk/photos/share/QfRRsBltSOwXJGX73GmX10Kp15mFcLZWdAX2iETj2db",
-      "image": "5.jpg"
+      "image": "5.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -536,7 +571,8 @@
       "genre": 5,
       "rating": 4.7,
       "image_url": "https://www.amazon.co.uk/photos/share/bwvEHqOVtE1bT2vvk1lTeiTg005F0n8OaYnpjObGkNX",
-      "image": "6.jpg"
+      "image": "6.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -551,7 +587,8 @@
       "genre": 6,
       "rating": 4.4,
       "image_url": "https://www.amazon.co.uk/photos/share/U6lp6HhagYsBzm3WaxiacVnECVSKNvfMv7B8gT8lZSo",
-      "image": "7.jpg"
+      "image": "7.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -566,7 +603,8 @@
       "genre": 7,
       "rating": 4.5,
       "image_url": "https://www.amazon.co.uk/photos/share/gFI4nKX0fXa909z7nCx38eVaXqap2U5pOP0Uc6CXGNn",
-      "image": "8.jpg"
+      "image": "8.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -581,7 +619,8 @@
       "genre": 8,
       "rating": 4.7,
       "image_url": "https://www.amazon.co.uk/photos/share/amzGWb5cuEwBzkEWZsB3kMU18TxbYWvAshK8ubZpLxM",
-      "image": "9.jpg"
+      "image": "9.jpg",
+      "pub_date": "2020-04-14"
     }
   },
   {
@@ -596,7 +635,8 @@
       "genre": 9,
       "rating": 4.4,
       "image_url": "https://www.amazon.co.uk/photos/share/dn3ZbD4C9fCAGJmBeNveUaEyaZcvqLLEiHVg2KFvsIg",
-      "image": "10.jpg"
+      "image": "10.jpg",
+      "pub_date": "2020-04-14"
     }
   }
 ]
