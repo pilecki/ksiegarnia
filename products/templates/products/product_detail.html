@@ -67,11 +67,11 @@
                             <div>
                                 <a href="{% url 'products' %}" class="btn">
                                     <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
+                                        <i class="fas fa-chevron-left font-green"></i>
                                     </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
+                                    <span class="text-uppercase btn custom-btn">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn text-uppercase" value="Add to Bag">
+                                <input type="submit" class="btn text-uppercase custom-btn" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">                        
                     </form>

@@ -37,6 +37,16 @@
                             <p class="mb-2 text-left lead">£{{ product.price }}</p>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col">
+                                <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                                {% csrf_token %}                        
+                                    <input type="hidden" name="quantity" value="1" min="1" max="1">                                
+                                    <input type="submit" class="btn-small rounded border-0 custom-btn" value="Add to Bag">
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -69,6 +79,14 @@
                         <div class="ml pt-3">
                             <p class="lead mb-0 text-right">£{{ product.price }}</p>
                         </div>
+                        <div class="ml pt-2">                            
+                            <form class="form text-right" action="{% url 'add_to_bag' product.id %}" method="POST">
+                            {% csrf_token %}                        
+                                <input type="hidden" name="quantity" value="1" min="1" max="1">                                
+                                <input type="submit" class="btn-small rounded border-0 custom-btn" value="Add to Bag">
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            </form>                            
+                        </div>
                     </div>
                 </div>
             </div>    
@@ -79,7 +97,7 @@
 
     <div class="d-block d-sm-none justify-content-center w-100 no-gutters" style="overflow:hidden">       
         {% for product in newest_products %}   
-            <div class="overflow-hidden mb-1 py-1">
+            <div class="overflow-hidden mb-1 py-1 card-border">
             {% if product.image %}                    
                 <div class="float-left pr-1">
                     <a href="{% url 'product_detail' product.id %}">
@@ -90,7 +108,7 @@
                     <p class="text-truncate small-font">{{ product.name }}</p>                            
                 </div>
                 <div class="ml pt-3">
-                    <p class="lead mb-0 text-right">${{ product.price }}</p>
+                    <p class="lead mb-0 text-right">£{{ product.price }}</p>
                 </div>
             </div>                      
             {% else %}
