@@ -26,10 +26,10 @@ a:hover {
 }
 }
 .font-orange {
-    color: #e77740;
+    color: #e77740 !important;
 }
 .font-green {
-    color: #5ecf0a;
+    color: #5ecf0a !important;
 }
 
 .small-font-8 {

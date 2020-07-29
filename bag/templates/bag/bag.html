@@ -3,72 +3,17 @@
 
 {% block all_categories %}
 
-<!--  All categories button under the navbar on small devices-->
 
-<div class="d-lg-none">
-    <div class="text-center">
-        <a class="p-0 all-categories" type="button" data-toggle="collapse" data-target="#all-categories" aria-controls="all-categories" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="">All categories</span>
-        </a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="all-categories">
-        <table class="table table-bordered text-center">            
-            <tbody>
-                <tr>                
-                    <td>
-                        <a href="{% url 'products' %}?genre=programming">Programming</a>
-                    </td>
-                    <td>
-                        <a href="{% url 'products' %}?genre=business">Business</a>
-                    </td>
-                </tr>
-                 <tr>                
-                    <td>
-                        <a href="{% url 'products' %}?genre=hardware">Hardware</a>
-                    </td>
-                    <td>
-                        <a href="{% url 'products' %}?genre=network">Network</a>
-                    </td>
-                </tr>
-                 <tr>                
-                    <td>
-                        <a href="{% url 'products' %}?genre=hacking">Hacking</a>
-                    </td>
-                    <td>
-                        <a href="{% url 'products' %}?genre=web_application">Web application</a>
-                    </td>
-                </tr>
-                 <tr>                
-                    <td>
-                        <a href="{% url 'products' %}?genre=electronics">Electronics</a>
-                    </td>
-                    <td>
-                        <a href="{% url 'products' %}?genre=graphics">Graphics</a>
-                    </td>
-                </tr>
-                 <tr>                
-                    <td>
-                        <a href="{% url 'products' %}?genre=games">Games</a>
-                    </td>
-                    <td>
-                        <a href="{% url 'products' %}?genre=databases">Databases</a>
-                    </td>
-                </tr>                
-            </tbody>
-        </table> 
-    </div>
-</div>
 
 {% endblock %}
 
 {% block shop %}
  <div class="container mb-2">
-        <div class="row">
-            <div class="col">
-                <hr>
+        <div class="row my-5">
+            <div class="col ml-2">
+                
                 <h4 class="">Your Cart</h4>
-                <hr>
+                
             </div>
         </div>
 
@@ -76,8 +21,8 @@
             <div class="col">
                 {% if bag_items %}
                     <div class="table-responsive rounded">
-                        <table class="table table-sm table-borderless">
-                            <thead class="text-black hide-element">
+                        <table class="table table-s">
+                            <thead>
                                 <tr>
                                     <th scope="col">Title</th>
                                     <th scope="col"></th>
@@ -99,7 +44,7 @@
                                     <td class="pt-2">
                                         <p class="my-0 font-table-small">{{ item.product.name }}</p>
                                     </td>                                
-                                    <td colspan="2" class="pt-2 font-table-small move-element">                                        
+                                    <td colspan="2" class="pt-2 font-table-small">                                        
                                         <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
@@ -128,34 +73,34 @@
                                             </div>
                                             
                                         </form>                                        
-                                        <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>                                        
+                                        <a class="update-link font-green"><small>Update</small></a>
+                                        <a class="remove-item font-orange float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>                                        
                                     </td>
-                                    <td class="pt-2 font-table-small hide-element">
-                                        <p class="my-0">${{ item.product.price }}</p>                                        
+                                    <td class="pt-2 font-table-small">
+                                        <p class="my-0">£{{ item.product.price }}</p>                                        
                                     </td>
                                 </tr>                                
                                 
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-4 pt-sm-3 pt-md-5 text-right">
-                                    <h6>Total: ${{ total|floatformat:2 }}</h6>
-                                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                    <h6 class="mt-3"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h6>
+                                    <h6>Total: £{{ total|floatformat:2 }}</h6>
+                                    <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                                    <h6 class="mt-3"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h6>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
+                                    <a href="{% url 'products' %}" class="btn btn-outline-black">
+                                        <span class="icon p-1">
+                                            <i class="fas fa-chevron-left font-green"></i>
                                         </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
+                                        <span class="custom-btn rounded p-1">Keep Shopping</span>
                                     </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 pr-0">
-                                        <span class="text-uppercase">Secure Checkout</span>
-                                        <span class="icon">
-                                            <i class="fas fa-lock"></i>
+                                    <a href="{% url 'checkout' %}" class="btn btn-black pr-0">
+                                        <span class="custom-btn rounded p-1">Secure Checkout</span>
+                                        <span class="icon p-1">
+                                            <i class="fas fa-lock font-green"></i>
                                         </span>
                                     </a>
                                 </td>
