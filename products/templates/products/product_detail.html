@@ -5,23 +5,14 @@
 {% block content %}
     <div class="container">
        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 ">                    
-                    {% if product.image %}
-                        <a href="{{ product.image.url }}" target="_blank" class="float-md-left pr-3 pt-3">
-                            <img class="card-img-top img-fluid width-50" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        </a>
-                    {% else %}
-                    <a href="">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                    </a>
-                    {% endif %}                    
-                    <p class="mb-0 pt-3 font-h">{{ product.name }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+            <div class="row">                
+                <div class="col-md-6">                    
+                    <p class="mb-2 pt-3 font-h font-weight-bold">{{ product.name }}</p>
+                    <p class="lead mb-1 text-left">£{{ product.price }}</p>
                     {% if product.rating %}
                     <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                     {% else %}
-                    <small class="text-muted">No Rating</small>
+                    <small class="text-muted">No Rating</small>                    
                     {% endif %}
                     {% if request.user.is_superuser %}
                     <div>
@@ -58,20 +49,30 @@
                                 </div>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <a href="{% url 'products' %}" class="btn rounded-0 mt-5">
+                            <div>
+                                <a href="{% url 'products' %}" class="btn">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                <input type="submit" class="btn text-uppercase" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">                        
-                    </form>
-                    
+                    </form>                    
                 </div>
-            </div>
+                <div class="col-md-6 d-none d-md-block">                    
+                    {% if product.image %}
+                        <a href="{{ product.image.url }}" target="_blank" class="float-md-left pr-3 pt-3">
+                            <img class="card-img-top img-fluid width-50" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                    {% else %}
+                    <a href="">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    </a>
+                    {% endif %}
+                </div>
+            </div>            
        </div>        
     </div>
     
