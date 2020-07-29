@@ -1,4 +1,4 @@
-
+<div class="row cards-background">
 <div class="container">
     <div class="row pt-1 pb-4 position-relative justify-content-center">        
         <div class="d-inline-block">            
@@ -25,14 +25,14 @@
                     </a>
                     {% endif %}                                   
                     <div class="card-footer bg-white pt-0 border-0 text-left">
+                        <div class="row title-height pt-1">
+                            <div class="col">
+                                <p class="mb-2 text-left small-font-8">{{ product.name }}</p>                                
+                            </div>                            
+                        </div>
                         <div class="row">
                             <div class="col">
-                                <p class="lead mb-0 text-left font-weight-bold default-font">${{ product.price }}</p>
-                                {% if product.rating %}
-                                <small class="text-muted "><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                {% else %}
-                                <small class="text-muted">No Rating</small>
-                                {% endif %}
+                            <p class="mb-2 text-left lead">£{{ product.price }}</p>
                             </div>
                         </div>
                     </div>
@@ -64,6 +64,9 @@
                         <div class="card-body p-0">
                             <h6 class="card-title small-font">{{product.name}}</h6>                                                
                         </div>
+                        <div class="ml pt-3">
+                            <p class="lead mb-0 text-right">£{{ product.price }}</p>
+                        </div>
                     </div>
                 </div>
             </div>    
@@ -85,7 +88,7 @@
                     <p class="text-truncate small-font">{{ product.name }}</p>                            
                 </div>
                 <div class="ml pt-3">
-                    <p class="lead mb-0 text-right font-weight-bold default-font">${{ product.price }}</p>
+                    <p class="lead mb-0 text-right">${{ product.price }}</p>
                 </div>
             </div>                      
             {% else %}
@@ -103,7 +106,7 @@
     
 </div>
     
-
+</div>
 
 
  

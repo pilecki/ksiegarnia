@@ -30,6 +30,9 @@ a:hover {
     color: #5ecf0a;
 }
 
+.small-font-8 {
+    font-size: 0.8rem;
+}
 
 .font-h {
     line-height: 1.7rem;
@@ -74,21 +77,6 @@ a:hover {
 }
 
 
-@media only screen and (max-width: 992px) {
-    .padding-main-catalog-1 {
-    
-    padding-right: 2rem;
-}
-}
-
-@media only screen and (max-width: 850px) {
-    .hidden-main-catalog {
-    
-    display: none;
-}
-}
-
-
 @media only screen and (max-width: 690px) {
     .display-none-on-min-690 {
     
@@ -119,8 +107,10 @@ a:hover {
 
 
 /* Cards */
+.cards-background {
+    background-color: #d9dae12e;
+}
 
- 
 .img-small {
         height: 100px;
         width: 85px;
@@ -137,6 +127,10 @@ a:hover {
     border-radius: .25rem;
 }
 
+.title-height {
+    height: 110px;
+    
+}
 
 @media only screen and (min-width: 768px) {
     .right-md-element {
@@ -153,7 +147,7 @@ a:hover {
     .right-sm-element {
     margin-bottom: 5px;
     position: absolute;
-    top: 35px;
+    top: 25px;
     font-size: 0.7rem;
     padding-top: 0.3rem;
 }
@@ -188,10 +182,9 @@ tr > td {
   height: auto;
   width: 0;
   position: fixed;
-  z-index: 1;
-  top: 0;
+  z-index: 1;  
   left: 0;
-  background-color: #111;
+  background-color:#e77740;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -201,13 +194,13 @@ tr > td {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #5d1818;
   display: block;
   transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: darkcyan;
   text-decoration: none;
 }
 
