@@ -31,7 +31,7 @@
                                                 <p class="lead mt-lg-3 text-left">£{{ product.price }}</p>                                                                                               
                                                 {% if request.user.is_superuser %}
                                                 <div>
-                                                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                                    <a href="{% url 'edit_product' product.id %}">Edit</a> 
                                                     <a href="{% url 'delete_product' product.id %}">Delete</a>
                                                 </div>
                                                 {% endif %}

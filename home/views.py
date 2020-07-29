@@ -25,12 +25,23 @@ def newest(request):
     """ A page  showing the last 12 books added"""
 
     newest_products = Product.objects.order_by('-pub_date')[:11]
-    best_rated = Product.objects.order_by('-rating')[:11]
     context = {
 
         'newest_products': newest_products,
-        'best_rated': best_rated,
 
     }
 
     return render(request, 'home/newest.html', context)
+
+
+def best(request):
+    """ A page  showing the last 12 books added"""
+
+    best_rated = Product.objects.order_by('-rating')[:11]
+    context = {
+
+        'best_rated': best_rated,
+
+    }
+
+    return render(request, 'home/best.html', context)
