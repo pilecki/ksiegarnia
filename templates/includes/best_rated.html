@@ -1,4 +1,4 @@
-<div class="row cards-background">
+
 <div class="container">
     <div class="row pt-1 pb-4 position-relative justify-content-center">        
         <div class="d-inline-block">            
@@ -14,7 +14,7 @@
     <div class="row">    
         {% for product in best_rated %}
             <div class="d-none d-lg-block col-lg-3">
-                <div class="card h-100">
+                <div class="card card-border h-100">
                     {% if product.image %}
                     <a href="{% url 'product_detail' product.id %}">
                         <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -45,7 +45,7 @@
 
     <div class="row d-none d-sm-block d-md-block d-lg-none d-sm-flex d-md-flex justify-content-center">        
         {% for product in best_rated %}
-            <div class="card py-1" style="width: 500px;">
+            <div class="card  card-border py-1" style="width: 500px;">
                 <div class="row no-gutters">
                     {% if product.image %}
                     <div class="col-sm-3">
@@ -106,7 +106,6 @@
     
 </div>
     
-</div>
 
 
  

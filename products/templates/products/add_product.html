@@ -67,7 +67,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h4 class="">Product Management</h4>
+                <h4>Add product</h4>
                 <hr>
             </div>
         </div>
@@ -78,8 +78,8 @@
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div>
-                        <a class="btn" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn" type="submit">Add Product</button>
+                        <a class="btn custom-btn" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn custom-btn" type="submit">Add Product</button>
                     </div>
                 </form>   
             

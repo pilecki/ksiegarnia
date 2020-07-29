@@ -1,6 +1,6 @@
 <!-- Container for home page categories -->
 <hr>
-<div class="row cards-background">
+
 <div class="container">
     <div class="row pt-1 pb-4 position-relative justify-content-center">        
         <div class="d-inline-block">            
@@ -16,7 +16,7 @@
     <div class="row">    
         {% for product in newest_products %}
             <div class="d-none d-lg-block col-lg-3">
-                <div class="card h-100">
+                <div class="card card-border h-100">
                     {% if product.image %}
                     <a href="{% url 'product_detail' product.id %}">
                         <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -47,7 +47,7 @@
 
     <div class="row d-none d-sm-block d-md-block d-lg-none d-sm-flex d-md-flex justify-content-center">        
         {% for product in newest_products %}
-            <div class="card py-1" style="width: 500px;">
+            <div class="card py-1 card-border" style="width: 500px;">
                 <div class="row no-gutters">
                     {% if product.image %}
                     <div class="col-sm-3">
@@ -79,7 +79,7 @@
 
     <div class="d-block d-sm-none justify-content-center w-100 no-gutters" style="overflow:hidden">       
         {% for product in newest_products %}   
-            <div class="overflow-hidden mb-1 py-1 default-border">
+            <div class="overflow-hidden mb-1 py-1">
             {% if product.image %}                    
                 <div class="float-left pr-1">
                     <a href="{% url 'product_detail' product.id %}">
@@ -106,7 +106,7 @@
     <hr>      
     
 </div>
-</div> 
+
 
 
 
