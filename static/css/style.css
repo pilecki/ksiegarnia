@@ -23,7 +23,20 @@ a:hover {
     font-size: 0.8rem;
 }
 }
+.font-orange {
+    color: #e77740;
+}
+.font-green {
+    color: #5ecf0a;
+}
 
+
+.font-h {
+    line-height: 1.7rem;
+}
+#text-right-lg {
+    text-align: right !important;
+}
 
 
 /*   Navbar   */
@@ -32,7 +45,6 @@ a:hover {
     display: flex;
     flex-wrap: nowrap;
 }
-
 
 
 .vertical-center-mobile {
@@ -76,12 +88,6 @@ a:hover {
 }
 }
 
-@media only screen and (max-width: 460px) {
-    .navbar-small {
-    
-    font-size: 1rem;
-}
-}
 
 @media only screen and (max-width: 690px) {
     .display-none-on-min-690 {
@@ -103,7 +109,12 @@ a:hover {
     padding-top: 1.5rem;
     }
 }
-
+@media only screen and (max-width: 576px) {
+    .sm-invisible {
+    display: none; 
+    
+}
+}
 
 
 
@@ -146,15 +157,6 @@ a:hover {
     font-size: 0.7rem;
     padding-top: 0.3rem;
 }
-}
-
-/* Styled all categories button on small devices */
-
-.all-categories {
-    width: 100%;
-    background-color: orange;
-    font-size: 1rem;
-    color: pink;
 }
 
 
@@ -234,14 +236,6 @@ tr > td {
 }
 
 
-/* Font styles  */
-
-.font-h {
-    line-height: 1.7rem;
-}
-#text-right-lg {
-    text-align: right !important;
-}
 
 
 /* Media queries */

@@ -1,35 +1,37 @@
     <!--Navbar -->
 <div class="container-fluid no-gutters">
-<nav class="navbar navbar-light orange d-block d-sm-none px-0">
+<nav class="navbar d-block d-sm-none px-0">
 
     <!--  Shopping cart -->
 
     <div class="d-inline-block float-right">
         <div class="d-inline-block">
             <a class="" href="{% url 'view_bag' %}">                                            
-                <i class="fas fa-shopping-cart"></i>                             
+                <i class="fas fa-shopping-cart font-orange"></i>                             
             </a>
         </div>        
         <div class="d-inline-block vertical-center-mobile">
-            <p class="my-0">
-                {% if grand_total %}
-                {{ grand_total|floatformat:2 }}
-                {% else %}
-                $0.00
-                {% endif %}
-            </p>           
+            <strong>
+                <p class="my-0">
+                    {% if grand_total %}
+                    {{ grand_total|floatformat:2 }}                
+                    {% endif %}
+                </p>
+            </strong>        
         </div>                  
     </div>         
     
     <!-- Collapsible button -->
 
     <button class="navbar-toggler mb-2 ml-2 p-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"><i class="fas fa-bars hamburger font-green"></i></span>
     </button>
     
     <!-- Brand name -->
-
-    <a class="navbar-brand ml-2 navbar-small" href="{% url 'home' %}">Bookshop</a>
+    <strong>
+        <a class="navbar-brand font-orange ml-2" href="{% url 'home' %}">Bookshop<span class="font-green">.co.uk</span></a>
+    </strong>
+    
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav pl-2">
@@ -67,14 +69,13 @@
                         <div class="input-group-append">
                             <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                                 <span class="icon">
-                                    <i class="fas fa-search"></i>
+                                    <i class="fas fa-search font-green"></i>
                                 </span>
                             </button>
                         </div>
                 </div>
             </form>
         </div>
-    </div>      
-
+    </div>
 </nav>
 </div>

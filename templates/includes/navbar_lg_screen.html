@@ -1,9 +1,49 @@
-    <!--  Hamburger  containing list of categories of books-->
+    <!-- Register, login, management product links -->
+
     <div class="container-fluid">
-        <div class="row d-lg-flex d-none d-lg-block pt-3">           
+        <div class="row sm-invisible">
+            <div class="col-12">
+                <ul class="list-inline list-unstyled float-right my-0">
+                    {% if request.user.is_authenticated  %}
+                        {% if request.user.is_superuser %}
+                        <li class="list-inline-item mx-0">                       
+                            <div class="dropdown">
+                                <p class="nav-links-lg nav-links-md nav-links-xlg dropdown-toggle h6" id="dropdownMenu2" data-toggle="dropdown" 
+                                aria-haspopup="true" aria-expanded="false" >Product Management
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                        <a class="dropdown-item" href="{% url 'add_product' %}">Add product</a>
+                                        <a class="dropdown-item" href="{% url 'add_coming_soon' %}">Add new release</a>                                    
+                                    </div>
+                                </p>
+                            </div>
+                        </li>
+                        {% endif %}
+                        <li class="list-inline-item mx-0">
+                            <a class="nav-links-lg nav-links-md nav-links-xlg font-orange" href="{% url 'profile' %}">My Profile</a>
+                        </li>
+                        <li class="list-inline-item mx-0">
+                            <a class="nav-links-lg nav-links-md nav-links-xlg text-muted" href="{% url 'account_logout' %}">Logout</a>
+                        </li>
+                    {% else %}
+                        <li class="list-inline-item mx-0">
+                            <strong><a class="nav-links-lg nav-links-md nav-links-xlg font-orange" href="{% url 'account_login' %}">Login</a></strong>
+                        </li>
+                        <li class="list-inline-item mx-0">                        
+                            <a class="nav-links-lg nav-links-md nav-links-xlg font-orange text-muted" href="{% url 'account_signup' %}">Register</a>                            
+                        </li>
+                        
+                    {% endif %}                   
+                </ul>        
+            </div>
+        </div>
+        <hr class="mt-0 mb-1 sm-invisible">
+        
+        <!--  Hamburger  containing list of categories of books-->
+
+        <div class="row d-lg-flex d-none d-lg-block pt-1 pb-3">           
             <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled my-0">
-                    <li class="list-inline-item">
+                    <li class="list-inline-item mr-0">
                         <div id="mySidenav" class="sidenav">
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                             <a href="{% url 'products' %}?genre=programming">Programming</a>
@@ -18,17 +58,16 @@
                             <a href="{% url 'products' %}?genre=databases">Databases</a>
                         </div>                  
             
-                        <i class="fas fa-bars hamburger d-none d-lg-block mr-3" onclick="openNav()"></i>
+                        <i class="fas fa-bars hamburger d-none d-lg-block mr-3 font-green" onclick="openNav()"></i>
                     </li>
                     <li class="list-inline-item text-center">
-                        <a class="navbar-brand" href="{% url 'home' %}">Bookshop</a>
+                        <strong>
+                            <a class="navbar-brand font-orange" href="{% url 'home' %}">Bookshop<span class="font-green">.co.uk</span></a>
+                        </strong>
                     </li>
                 </ul>
                     
-            </div>    
-            
-
-                              
+            </div>                              
                 
             <!-- Searchbar-->
 
@@ -39,7 +78,7 @@
                             <div class="input-group-append">
                                 <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                                     <span class="icon">
-                                        <i class="fas fa-search"></i>
+                                        <i class="fas fa-search font-green"></i>
                                     </span>
                                 </button>
                             </div>
@@ -47,55 +86,27 @@
                     </form>
             </div>
 
-            <!-- Register , login and basket links -->
+            <!-- Basket links -->
 
 
             <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-lg-right my-0">
-                    {% if request.user.is_authenticated  %}
-                        {% if request.user.is_superuser %}
-                        <li class="list-inline-item mx-0">                       
-                            <div class="dropdown">
-                                <p class="nav-links-lg nav-links-md nav-links-xlg dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" 
-                                aria-haspopup="true" aria-expanded="false" >Product Management
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                        <a class="dropdown-item" href="{% url 'add_product' %}">Add product</a>
-                                        <a class="dropdown-item" href="{% url 'add_coming_soon' %}">Add new release</a>                                    
-                                    </div>
-                                </p>
-                            </div>
-                        </li>
-                        {% endif %}
-                        <li class="list-inline-item mx-0">
-                            <a class="nav-links-lg nav-links-md nav-links-xlg" href="{% url 'profile' %}">My Profile</a>
-                        </li>
-                        <li class="list-inline-item mx-0">
-                            <a class="nav-links-lg nav-links-md nav-links-xlg" href="{% url 'account_logout' %}">Logout</a>
-                        </li>
-                    {% else %}
-                        <li class="list-inline-item mx-0">
-                            <a class="nav-links-lg nav-links-md nav-links-xlg" href="{% url 'account_signup' %}">Register</a>
-                        </li>
-                        <li class="list-inline-item mx-0">
-                            <a class="nav-links-lg nav-links-md nav-links-xlg" href="{% url 'account_login' %}">Login</a>
-                        </li>
-                    {% endif %}
-
+                    
                     <!--  Shopping bag-->
 
                     <li class="list-inline-item mx-0">
                         <a class="nav-links-lg nav-links-md" href="{% url 'view_bag' %}">                        
-                            <i class="fas fa-shopping-cart"></i>                             
+                            <i class="fas fa-shopping-cart font-orange"></i>                             
                         </a>                   
                     </li>                    
                     <li class="list-inline-item mx-0">                                                              
-                        <p class="my-0 nav-links-lg nav-links-md">
-                            {% if grand_total %}
-                            {{ grand_total|floatformat:2 }}
-                            {% else %}
-                            $0.00
-                            {% endif %}
-                        </p>                                       
+                        <strong>
+                            <p class="my-0 nav-links-lg nav-links-md">£
+                                {% if grand_total %}
+                                {{ grand_total|floatformat:2 }}
+                                {% endif %}                            
+                            </p>
+                        </strong>                                       
                     </li>
                 </ul>        
             </div>
@@ -103,7 +114,7 @@
 
         <!--  Categories of books-->
 
-        <div class="row d-lg-flex d-none d-lg-block text-center py-3">
+        <div class="row d-lg-flex d-none d-lg-block text-center py-1 orange rounded">
             <div class="col">
                 <a href="{% url 'products' %}?category=books">Books</a>
             </div>
