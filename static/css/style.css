@@ -1,3 +1,28 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+
+/* Footer */
+
+#page-container {
+  position: relative;
+  min-height: 100%;
+  
+}
+
+#content-wrap {
+  padding-bottom:8.5rem; 
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8.5rem;           
+}
 
 /*   Coulours   */
 
@@ -50,11 +75,6 @@ a:hover {
 }
 
 /*  Navbar  */
-
-.flexi {
-    display: flex;
-    flex-wrap: nowrap;
-}
 
 
 .vertical-center-mobile {
