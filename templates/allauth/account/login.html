@@ -8,44 +8,46 @@
 {% block content %}
 <div class="container">
     <div class="row mt-5">
-        <div class="mx-auto">
-            <div class="px-2">
-                <h2>{% trans "Sign In" %}</h2>        
-        
-                {% get_providers as socialaccount_providers %}
+        <div class="mx-auto border p-2">
+            <div class="mx-auto">
+                <div class="px-2">
+                    <h2>{% trans "Sign In" %}</h2>        
+            
+                    {% get_providers as socialaccount_providers %}
 
-                {% if socialaccount_providers %}
-                <p>{% blocktrans with site.name as site_name %}Please sign in with one
-                of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-                for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+                    {% if socialaccount_providers %}
+                    <p>{% blocktrans with site.name as site_name %}Please sign in with one
+                    of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+                    for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
-                <div class="socialaccount_ballot">
-                    <ul class="socialaccount_providers">
-                        {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-                    </ul>
-                    <div class="login-or">{% trans 'or' %}</div>
+                    <div class="socialaccount_ballot">
+                        <ul class="socialaccount_providers">
+                            {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                        </ul>
+                        <div class="login-or">{% trans 'or' %}</div>
+                    </div>
                 </div>
-            </div>
-                {% include "socialaccount/snippets/login_extra.html" %}
+                    {% include "socialaccount/snippets/login_extra.html" %}
 
-                {% else %}
-            <div>
-                <p>{% blocktrans %}If you have not created an account yet,<br> then please
-                    <a href="{{ signup_url }}" class="font-weight-bold">sign up</a> first.
-                {% endblocktrans %}
-                </p>
-            {% endif %}
-            </div>
-            <div>
-                <form class="login width-fit-content" method="POST" action="{% url 'account_login' %}">
-                {% csrf_token %}
-                {{ form|crispy }}
-                {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                    {% else %}
+                <div>
+                    <p>{% blocktrans %}If you have not created an account yet,<br> then please
+                        <a href="{{ signup_url }}" class="font-weight-bold">sign up</a> first.
+                    {% endblocktrans %}
+                    </p>
                 {% endif %}
-                <a class="button secondaryAction btn rounded-0" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-                <button class="primaryAction btn rounded-0" type="submit">{% trans "Sign In" %}</button>
-                </form>
+                </div>
+                <div>
+                    <form class="login width-fit-content" method="POST" action="{% url 'account_login' %}">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                    {% endif %}
+                    <a class="button secondaryAction btn rounded custom-btn" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+                    <button class="primaryAction btn rounded custom-btn" type="submit">{% trans "Sign In" %}</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
