@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://ksiegarnia77.herokuapp.com/', 'localhost']
 
 
 # Application definition
@@ -117,18 +117,19 @@ WSGI_APPLICATION = 'ksiegarnia.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-# }
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
-DATABASES = {
-    'default': dj_database_url.parse('postgres://atdaebyppvmxrd:d3289f5ebbffa543887846664e10a170135642f923cddd2b9ea9372aeaeebce0@ec2-54-217-213-79.eu-west-1.compute.amazonaws.com:5432/d764sali0tbl8h')
-
-}
 
 
 # Password validation
