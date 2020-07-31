@@ -226,13 +226,13 @@ tr > td {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #5d1818;
+  color: #584838;
   display: block;
   transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: darkcyan;
+  color: #faebd752;
   text-decoration: none;
 }
 
@@ -259,8 +259,6 @@ tr > td {
     font-size: 18px;
      }
 }
-
-
 
 
 /* Media queries */

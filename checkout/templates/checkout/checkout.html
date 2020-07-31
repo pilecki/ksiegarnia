@@ -13,8 +13,8 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-12 offset-lg-3">
-                <form action="{% url 'checkout' %}" method="POST" id="payment-form" class="w-50">
+            <div class="col-md-6 mx-auto">
+                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                                         
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
@@ -37,13 +37,13 @@
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
 							{% else %}
 								<label class="form-check-label" for="id-save-info">
-                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                    <a class="font-orange" href="{% url 'account_signup' %}">Create an account</a> or 
+                                    <a class="font-orange" href="{% url 'account_login' %}">login</a> to save this information
                                 </label>
 							{% endif %}
 						</div>
                     </fieldset>
-                     <fieldset class="px-3">
+                     <fieldset class="m-3 border">
                         <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
                         <!-- A Stripe card element will go here -->
                         <div class="mb-3" id="card-element"></div>
@@ -55,9 +55,9 @@
 							<span class="icon">
 								<i class="fas fa-chevron-left font-green"></i>
 							</span>
-							<span>Adjust Bag</span>
+							<span class="custom-btn rounded p-1">Adjust Bag</span>
 						</a>
-						<button id="submit-button" class="pl-4">
+						<button id="submit-button" class="border-0 custom-btn rounded">
 							<span>Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
