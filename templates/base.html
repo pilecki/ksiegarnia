@@ -18,7 +18,6 @@
   <body>
     <div id="page-container">
         <div id="content-wrap">
-
             <header class="container-fluid no-gutters p-0">
                 
                     {% include 'includes/navbar_lg_screen.html' %}
@@ -84,26 +83,31 @@
             </div>
 
 
-            <!-- all other page content -->
-        
+            <!-- All other page content -->     
 
-            
-            {% block category %}
+            <!-- Block from home template -->
+            {% block home %}
             {% endblock %}
+
+            <!-- Block from checkout template -->
             {% block shop %}
             {% endblock %}
+            
+            <!--  Block from profile template -->
             {% block profile %}
             {% endblock %}
-            
+            <!-- Block from newest books template -->
             <div class="container">
             {% block newest %}
             {% endblock %}            
-            </div>   
-            {% block content %}
-
-            {% endblock %}
-
             </div>
+            <!-- Block from best and newest template -->
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <!-- Footer -->
+
         <footer id="footer" class="pt-5">
             <div class="row pt-4 orange m-0">
                 <div class="col-sm-4 text-center">
@@ -114,7 +118,7 @@
                 </div>
 
                 <div class="col-sm-4 orange">
-                    <h4 class="text-center pb-2 font-weight-bold">Follow us on media</h4>
+                    <h4 class="text-center pb-2 font-wieght-bold">Follow us on media</h4>
                     <ul class="list-inline text-center ">
                         <li class="list-inline-item">
                             <a target="_blank" href="#">
@@ -140,8 +144,8 @@
 
                 <div class="col-sm-4 orange">
                     <div class="text-center">
-                        <a class="btn font-weight-bold d-block" href="{% url 'account_login' %}">Login</a>
-                        <a class="btn font-weight-bold d-block" href="{% url 'account_signup' %}">Register</a>
+                        <a class="btn d-block rounded w-50 mx-auto footer-border my-1" href="{% url 'account_login' %}">Login</a>
+                        <a class="btn d-block rounded w-50 mx-auto footer-border" href="{% url 'account_signup' %}">Register</a>
                     </div>
                 </div>
             </div>    
